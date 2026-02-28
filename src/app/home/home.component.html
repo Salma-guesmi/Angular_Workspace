@@ -1,0 +1,13 @@
+<div>Interpolation:{{v1}}</div>
+<div>Property Binding: <img [src]="v2" alt=""></div>
+
+<div>Event Binding: <button (click)="fn()">Click me</button></div>
+
+<div>Two way Binding: <input [(ngModel)]="v3" type="text"> {{v3}}</div>
+
+<div *ngIf="v4 < 5">
+  <p>Bonjour tout le monde</p>
+</div>
+
+<div *ngFor="let student of students2, let i=index">
+  <p>{{i}} - {{student.id}}  {{student.name}}  {{student.age}}</p>
