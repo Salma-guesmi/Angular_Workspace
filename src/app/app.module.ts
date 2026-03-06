@@ -9,19 +9,21 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 
 import { FormsModule } from '@angular/forms';
+import { ListSuggestionComponent } from './core/list-suggestion/list-suggestion.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     ListUsersComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    ListSuggestionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
-    
   ],
   providers: [],
   bootstrap: [AppComponent]
