@@ -1,0 +1,56 @@
+<div class="suggestions-page">
+  <div class="page-head">
+    <h1 class="page-title">Liste des suggestions</h1>
+    <a routerLink="ajouter" class="btn-add">Ajouter suggestion</a>
+  </div>
+
+  <div class="search-wrap">
+    <input
+      type="text"
+      class="search-input"
+      [(ngModel)]="searchTerm"
+      placeholder="Rechercher une suggestion"
+    />
+  </div>
+
+  <div class="cards">
+    <article class="card" *ngFor="let s of filteredSuggestions">
+      <h2 class="card-title">{{ s.title }}</h2>
+      <div class="card-meta">
+        <span class="category">{{ s.category }}</span>
+        <span class="date">{{ s.date | date : 'd MMM y' }}</span>
+      </div>
+      <p class="card-desc">{{ s.description }}</p>
+      <span [ngClass]="badgeClass(s)">{{ statusLabel(s) }}</span>
+
+      <div class="card-row-actions">
+        <a class="btn-details" [routerLink]="[s.id]">Détails</a>
+      </div>
+
+      <div class="actions" *ngIf="s.status !== 'refusee'">
+        <button type="button" class="btn-like" (click)="like(s)">
+          <span class="thumb" aria-hidden="true">👍</span>
+          Like {{ s.nbLikes }}
+        </button>
+        <button
+          type="button"
+          class="btn-fav"
+          (click)="addFavorite(s)"
+          [disabled]="isFavorite(s)"
+        >
+          <span class="heart" aria-hidden="true">{{ isFavorite(s) ? '♥' : '♡' }}</span>
+          {{
+            isFavorite(s) ? 'Dans les favoris' : 'Ajouter aux favoris'
+          }}
+        </button>
+      </div>
+    </article>
+  </div>
+
+  <section class="favorites-panel" *ngIf="favorites.length">
+    <h3>Favoris ({{ favorites.length }})</h3>
+    <ul>
+      <li *ngFor="let f of favorites">{{ f.title }}</li>
+    </ul>
+  </section>
+</div>

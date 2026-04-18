@@ -1,0 +1,21 @@
+<div class="detail-page" *ngIf="suggestion as s; else notFound">
+  <a routerLink=".." class="back">← Retour à la liste</a>
+
+  <article class="detail-card">
+    <h1>{{ s.title }}</h1>
+    <p class="meta">
+      <span class="category">{{ s.category }}</span>
+      <span class="date">{{ s.date | date : 'd MMM y' }}</span>
+    </p>
+    <p class="desc">{{ s.description }}</p>
+    <p><strong>Statut :</strong> {{ s.status }}</p>
+    <p><strong>Likes :</strong> {{ s.nbLikes }}</p>
+  </article>
+</div>
+
+<ng-template #notFound>
+  <div class="detail-page">
+    <a routerLink=".." class="back">← Retour à la liste</a>
+    <p class="missing">Suggestion introuvable.</p>
+  </div>
+</ng-template>

@@ -1,0 +1,58 @@
+.detail-page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.back:hover {
+  text-decoration: underline;
+}
+
+.detail-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+}
+
+.detail-card h1 {
+  margin: 0 0 1rem;
+  font-size: 1.35rem;
+  color: #0f172a;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+}
+
+.category {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.date {
+  color: #64748b;
+}
+
+.desc {
+  margin: 0 0 1rem;
+  line-height: 1.6;
+  color: #334155;
+}
+
+.missing {
+  color: #64748b;
+}

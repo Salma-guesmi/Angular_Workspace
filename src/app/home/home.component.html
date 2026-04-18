@@ -1,13 +1,24 @@
-<div>Interpolation:{{v1}}</div>
-<div>Property Binding: <img [src]="v2" alt=""></div>
+<section class="home-hero">
+  <h1>Bienvenue</h1>
+  <p class="lead">
+    Page d’accueil du projet <strong>Campus Ideas</strong>. Utilisez le menu pour
+    consulter la <a routerLink="/suggestions">liste des suggestions</a>.
+  </p>
+</section>
 
-<div>Event Binding: <button (click)="fn()">Click me</button></div>
-
-<div>Two way Binding: <input [(ngModel)]="v3" type="text"> {{v3}}</div>
-
-<div *ngIf="v4 < 5">
-  <p>Bonjour tout le monde</p>
-</div>
-
-<div *ngFor="let student of students2, let i=index">
-  <p>{{i}} - {{student.id}}  {{student.name}}  {{student.age}}</p>
+<section class="workshop-demos">
+  <h2>Démonstrations (data binding)</h2>
+  <div>Interpolation : {{ v1 }}</div>
+  <div>Property binding : <img [src]="v2" alt="" class="demo-img" /></div>
+  <div>Event binding : <button type="button" (click)="fn()">Click me</button></div>
+  <div>
+    Two-way binding :
+    <input [(ngModel)]="v3" type="text" /> {{ v3 }}
+  </div>
+  <div *ngIf="v4 < 5">
+    <p>Bonjour tout le monde</p>
+  </div>
+  <div *ngFor="let student of students2; let i = index">
+    <p>{{ i }} - {{ student.id }} {{ student.name }} {{ student.age }}</p>
+  </div>
+</section>

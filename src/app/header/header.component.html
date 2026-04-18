@@ -1,1 +1,13 @@
-<p>header works!</p>
+<header class="navbar">
+  <a routerLink="/home" class="brand">Campus Ideas</a>
+  <nav class="nav-links">
+    <a
+      routerLink="/home"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Accueil</a
+    >
+    <a routerLink="/suggestions" routerLinkActive="active">Suggestions</a>
+    <a routerLink="/users" routerLinkActive="active">Utilisateurs</a>
+  </nav>
+</header>

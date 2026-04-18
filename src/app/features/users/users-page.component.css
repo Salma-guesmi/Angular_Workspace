@@ -1,0 +1,26 @@
+.users-page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+
+.users-page h1 {
+  margin: 0 0 0.75rem;
+  color: #0f172a;
+}
+
+.users-page p {
+  margin: 0 0 1.25rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.users-page a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.users-page a:hover {
+  text-decoration: underline;
+}
